@@ -85,7 +85,7 @@ storageBar.style.width = storage + "%";
 
    storage--;
 
-   storageText.innerHTML = storage + "GB / 100GB Used";
+   storageText.innerHTML = storage.toFixed(2) + "GB / 100GB Used";
 
    storageBar.style.width = storage + "%";
 }
