@@ -19,7 +19,11 @@
     <p>20GB / 100GB Used</p>
 
     <!-- Upload -->
-<button>Upload File</button>
+<input type="file" id="fileUpload" hidden>
+
+<button onclick="document.getElementById('fileUpload').click()">
+  Upload File
+</button>
     <h3>Your Files</h3>
     <ul>
         <li>📄 Resume.pdf</li>
