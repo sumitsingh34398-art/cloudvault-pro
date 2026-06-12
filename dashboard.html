@@ -27,11 +27,10 @@
     <h3>Your Files</h3>
 
 <ul id="fileList">
-   <li>📄 Resume.pdf</li>
-   <li>📷 Photo.png</li>
-   <li>🎵 Song.mp3</li>
+  <li>📄 Resume.pdf <button onclick="this.parentElement.remove()">❌</button></li>
+  <li>📷 Photo.png <button onclick="this.parentElement.remove()">❌</button></li>
+  <li>🎵 Song.mp3 <button onclick="this.parentElement.remove()">❌</button></li>
 </ul>
-
     <!-- Logout -->
     <button onclick="window.location.href='index.html'">Logout</button>
 
@@ -43,7 +42,7 @@ const list = document.getElementById("fileList");
 upload.addEventListener("change", function () {
     if (upload.files.length > 0) {
         let li = document.createElement("li");
-        li.innerHTML = "📁 " + upload.files[0].name;
+        li.innerHTML = "📁 " + upload.files[0].name + ' <button onclick="this.parentElement.remove()">❌</button>';
         list.appendChild(li);
     }
 });
