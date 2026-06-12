@@ -37,17 +37,15 @@
 
 </div>
 <script>
-document.getElementById("fileUpload").addEventListener("change", function() {
-    
-    let file = this.files[0];
+const upload = document.getElementById("fileUpload");
+const list = document.getElementById("fileList");
 
-    if(file){
+upload.addEventListener("change", function () {
+    if (upload.files.length > 0) {
         let li = document.createElement("li");
-        li.textContent = "📁 " + file.name;
-
-        document.getElementById("fileList").appendChild(li);
+        li.innerHTML = "📁 " + upload.files[0].name;
+        list.appendChild(li);
     }
-
 });
 </script>
 </body>
