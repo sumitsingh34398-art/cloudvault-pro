@@ -14,9 +14,9 @@
     <!-- Storage Bar -->
     <h3>Storage Used</h3>
     <div class="storage-box">
-        <div class="storage-fill"></div>
+       <div class="storage-fill" id="storageBar"></div>
     </div>
-    <p>20GB / 100GB Used</p>
+    <p id="storageText">20GB / 100GB Used</p>
 
     <!-- Upload -->
 <input type="file" id="fileUpload" hidden>
@@ -38,7 +38,9 @@
 <script>
 const upload = document.getElementById("fileUpload");
 const list = document.getElementById("fileList");
-
+let storage = 20;
+const storageText = document.getElementById("storageText");
+const storageBar = document.getElementById("storageBar");
 upload.addEventListener("change", function () {
     if (upload.files.length > 0) {
         let li = document.createElement("li");
