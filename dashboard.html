@@ -25,16 +25,30 @@
   Upload File
 </button>
     <h3>Your Files</h3>
-    <ul>
-        <li>📄 Resume.pdf</li>
-        <li>📷 Photo.png</li>
-        <li>🎵 Song.mp3</li>
-    </ul>
+
+<ul id="fileList">
+   <li>📄 Resume.pdf</li>
+   <li>📷 Photo.png</li>
+   <li>🎵 Song.mp3</li>
+</ul>
 
     <!-- Logout -->
     <button onclick="window.location.href='index.html'">Logout</button>
 
 </div>
+<script>
+document.getElementById("fileUpload").addEventListener("change", function() {
+    
+    let file = this.files[0];
 
+    if(file){
+        let li = document.createElement("li");
+        li.textContent = "📁 " + file.name;
+
+        document.getElementById("fileList").appendChild(li);
+    }
+
+});
+</script>
 </body>
 </html>
