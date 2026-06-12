@@ -46,6 +46,9 @@ upload.addEventListener("change", function () {
         let li = document.createElement("li");
         li.innerHTML = "📁 " + upload.files[0].name + ' <button onclick="this.parentElement.remove()">❌</button>';
         list.appendChild(li);
+        storage++;
+storageText.innerHTML = storage + "GB / 100GB Used";
+storageBar.style.width = storage + "%";
     }
 });
 </script>
