@@ -141,6 +141,23 @@ dropArea.addEventListener("drop", function(e) {
     storageBar.style.width = storage + "%";
   }
 });
+    dropArea.addEventListener("dragover", function(e){
+    e.preventDefault();
+    dropArea.style.border = "2px dashed yellow";
+});
+
+dropArea.addEventListener("dragleave", function(){
+    dropArea.style.border = "none";
+});
+
+dropArea.addEventListener("drop", function(e){
+    e.preventDefault();
+    dropArea.style.border = "none";
+
+    upload.files = e.dataTransfer.files;
+
+    upload.dispatchEvent(new Event("change"));
+});
     </script>
 </body>
 </html>
