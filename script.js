@@ -4,7 +4,13 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
 
-    localStorage.setItem("userEmail", email);
+    // Fixed password
+    let correctPassword = "123456";
 
-    window.location.href = "dashboard.html";
+    if(password === correctPassword){
+        localStorage.setItem("userEmail", email);
+        window.location.href = "dashboard.html";
+    } else {
+        alert("Wrong Password!");
+    }
 });
