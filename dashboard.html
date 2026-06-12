@@ -39,6 +39,7 @@
 <script>
 const upload = document.getElementById("fileUpload");
 const list = document.getElementById("fileList");
+const searchBox = document.getElementById("searchBox");
 let storage = 20;
 const storageText = document.getElementById("storageText");
 const storageBar = document.getElementById("storageBar");
@@ -87,6 +88,20 @@ storageBar.style.width = storage + "%";
 
    storageBar.style.width = storage + "%";
 }
+    searchBox.addEventListener("keyup", function () {
+   let filter = searchBox.value.toLowerCase();
+   let items = list.getElementsByTagName("li");
+
+   for (let i = 0; i < items.length; i++) {
+      let text = items[i].textContent.toLowerCase();
+
+      if (text.includes(filter)) {
+         items[i].style.display = "";
+      } else {
+         items[i].style.display = "none";
+      }
+   }
+});
     </script>
 </body>
 </html>
