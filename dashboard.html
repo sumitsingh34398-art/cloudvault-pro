@@ -9,7 +9,7 @@
 <div class="dashboard" id="dropArea">
 
     <h1>CloudVault Pro</h1>
-    <p>Welcome Back 👋</p>
+<p id="welcomeText">Welcome Back 👋</p>
 
     <!-- Storage Bar -->
     <h3>Storage Used</h3>
@@ -37,6 +37,12 @@
 
 </div>
 <script>
+    let userEmail = localStorage.getItem("userEmail");
+
+if (userEmail) {
+   document.getElementById("welcomeText").innerHTML =
+      "Welcome " + userEmail.split("@")[0] + " 👋";
+}
 const upload = document.getElementById("fileUpload");
 const list = document.getElementById("fileList");
 const searchBox = document.getElementById("searchBox");
