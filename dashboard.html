@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<div class="dashboard">
+<div class="dashboard" id="dropArea">
 
     <h1>CloudVault Pro</h1>
     <p>Welcome Back 👋</p>
@@ -102,6 +102,31 @@ storageBar.style.width = storage + "%";
          items[i].style.display = "none";
       }
    }
+});
+    const dropArea = document.getElementById("dropArea");
+
+dropArea.addEventListener("dragover", function(e) {
+  e.preventDefault();
+});
+
+dropArea.addEventListener("drop", function(e) {
+  e.preventDefault();
+
+  let file = e.dataTransfer.files[0];
+
+  if (file) {
+    let li = document.createElement("li");
+    li.innerHTML = "📂 " + file.name +
+      ' <button onclick="removeFile(this)">❌</button>';
+
+    list.appendChild(li);
+
+    let fileSize = file.size / (1024 * 1024 * 1024);
+    storage = storage + fileSize;
+
+    storageText.innerHTML = storage.toFixed(2) + "GB / 100GB Used";
+    storageBar.style.width = storage + "%";
+  }
 });
     </script>
 </body>
