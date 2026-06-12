@@ -83,6 +83,9 @@ li.innerHTML = icon + " " + fileName +
         list.appendChild(li);
        let fileSize = upload.files[0].size / (1024 * 1024 * 1024); 
 storage = storage + fileSize;
+
+totalFiles++;
+fileCount.innerHTML = "Total Files: " + totalFiles;
 storageText.innerHTML = storage + "GB / 100GB Used";
 storageBar.style.width = storage + "%";
     }
@@ -92,7 +95,8 @@ storageBar.style.width = storage + "%";
    btn.parentElement.remove();
 
    storage--;
-
+totalFiles--;
+fileCount.innerHTML = "Total Files: " + totalFiles;
    storageText.innerHTML = storage.toFixed(2) + "GB / 100GB Used";
 
    storageBar.style.width = storage + "%";
