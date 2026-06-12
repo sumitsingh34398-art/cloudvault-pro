@@ -24,6 +24,7 @@
 <button onclick="document.getElementById('fileUpload').click()">
   Upload File
 </button>
+    <input type="text" id="searchBox" placeholder="Search file...">
     <h3>Your Files</h3>
 
 <ul id="fileList">
@@ -58,6 +59,15 @@ else if (fileName.endsWith(".mp3")) {
 }
 else if (fileName.endsWith(".mp4")) {
    icon = "🎬";
+}
+        else if (fileName.endsWith(".doc") || fileName.endsWith(".docx")) {
+   icon = "📄";
+}
+else if (fileName.endsWith(".zip")) {
+   icon = "🗜️";
+}
+else if (fileName.endsWith(".txt")) {
+   icon = "📝";
 }
 li.innerHTML = icon + " " + fileName + 
 ' <button onclick="removeFile(this)">❌</button>';
