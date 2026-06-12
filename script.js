@@ -1,30 +1,10 @@
-const form = document.querySelector("form");
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
 
-form.addEventListener("submit", function(event){
-    event.preventDefault();
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
 
-    let email = document.querySelector('input[type="email"]').value;
-    let password = document.querySelector('input[type="password"]').value;
+    localStorage.setItem("userEmail", email);
 
-    // demo login check
-    if(email === "admin@gmail.com" && password === "12345"){
-        alert("Login Successful!");
-
-        // dashboard page open
-        window.location.href = "dashboard.html";
-    } 
-    else {
-        alert("Wrong Email or Password!");
-    }
+    window.location.href = "dashboard.html";
 });
-const fileInput = document.getElementById("fileUpload");
-
-if(fileInput){
-    fileInput.addEventListener("change", function(){
-        let fileName = document.getElementById("fileName");
-
-        if(this.files.length > 0){
-            fileName.innerText = "Selected: " + this.files[0].name;
-        }
-    });
-}
