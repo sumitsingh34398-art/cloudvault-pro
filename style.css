@@ -117,3 +117,10 @@ ul li{
     padding: 10px;
     border-radius: 8px;
 }
+input{
+  width:90%;
+  padding:10px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
+}
