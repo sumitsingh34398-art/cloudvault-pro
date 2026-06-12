@@ -44,7 +44,22 @@ const storageBar = document.getElementById("storageBar");
 upload.addEventListener("change", function () {
     if (upload.files.length > 0) {
         let li = document.createElement("li");
-        li.innerHTML = "📁 " + upload.files[0].name + ' <button onclick="this.parentElement.remove()">❌</button>';
+        let fileName = upload.files[0].name;
+let icon = "📁";
+
+if (fileName.endsWith(".pdf")) {
+   icon = "📄";
+}
+else if (fileName.endsWith(".png") || fileName.endsWith(".jpg") || fileName.endsWith(".jpeg")) {
+   icon = "🖼️";
+}
+else if (fileName.endsWith(".mp3")) {
+   icon = "🎵";
+}
+else if (fileName.endsWith(".mp4")) {
+   icon = "🎬";
+}
+li.innerHTML = icon + " " + fileName + ' <button onclick="this.parentElement.remove()">❌</button>';
         list.appendChild(li);
         storage++;
 storageText.innerHTML = storage + "GB / 100GB Used";
