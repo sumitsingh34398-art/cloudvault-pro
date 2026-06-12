@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CloudVault Dashboard</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg,#0f172a,#2563eb);
-            color:white;
-            text-align:center;
-            padding:50px;
-        }
-        .box{
-            background: rgba(255,255,255,0.1);
-            padding:30px;
-            border-radius:15px;
-            width:400px;
-            margin:auto;
-        }
-        button{
-            padding:12px 25px;
-            border:none;
-            border-radius:10px;
-            cursor:pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="box">
-    <h1>Welcome to CloudVault Pro</h1>
-    <p>Login Successful 🚀</p>
-    <h3>Your Secure Dashboard</h3>
+<div class="dashboard">
+
+    <h1>CloudVault Pro</h1>
+    <p>Welcome Back 👋</p>
+
+    <!-- Storage Bar -->
+    <h3>Storage Used</h3>
+    <div class="storage-box">
+        <div class="storage-fill"></div>
+    </div>
+    <p>20GB / 100GB Used</p>
+
+    <!-- Upload -->
     <button>Upload File</button>
+
+    <!-- Files -->
+    <h3>Your Files</h3>
+    <ul>
+        <li>📄 Resume.pdf</li>
+        <li>📷 Photo.png</li>
+        <li>🎵 Song.mp3</li>
+    </ul>
+
+    <!-- Logout -->
+    <button onclick="window.location.href='index.html'">Logout</button>
+
 </div>
 
 </body>
