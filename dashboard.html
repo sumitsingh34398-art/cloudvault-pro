@@ -49,6 +49,8 @@ const searchBox = document.getElementById("searchBox");
 let storage = 20;
 const storageText = document.getElementById("storageText");
 const storageBar = document.getElementById("storageBar");
+    const fileCount = document.getElementById("fileCount");
+let totalFiles = 3;
 upload.addEventListener("change", function () {
     if (upload.files.length > 0) {
         let li = document.createElement("li");
