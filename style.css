@@ -124,3 +124,10 @@ input{
   border:none;
   border-radius:8px;
 }
+#dropArea {
+  transition: 0.3s;
+}
+
+#dropArea:hover {
+  box-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
