@@ -59,7 +59,8 @@ else if (fileName.endsWith(".mp3")) {
 else if (fileName.endsWith(".mp4")) {
    icon = "🎬";
 }
-li.innerHTML = icon + " " + fileName + ' <button onclick="this.parentElement.remove()">❌</button>';
+li.innerHTML = icon + " " + fileName + 
+' <button onclick="removeFile(this)">❌</button>';
         list.appendChild(li);
         storage++;
 storageText.innerHTML = storage + "GB / 100GB Used";
@@ -67,5 +68,14 @@ storageBar.style.width = storage + "%";
     }
 });
 </script>
+    function removeFile(btn){
+   btn.parentElement.remove();
+
+   storage--;
+
+   storageText.innerHTML = storage + "GB / 100GB Used";
+
+   storageBar.style.width = storage + "%";
+}
 </body>
 </html>
