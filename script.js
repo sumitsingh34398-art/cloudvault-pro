@@ -17,3 +17,14 @@ form.addEventListener("submit", function(event){
         alert("Wrong Email or Password!");
     }
 });
+const fileInput = document.getElementById("fileUpload");
+
+if(fileInput){
+    fileInput.addEventListener("change", function(){
+        let fileName = document.getElementById("fileName");
+
+        if(this.files.length > 0){
+            fileName.innerText = "Selected: " + this.files[0].name;
+        }
+    });
+}
