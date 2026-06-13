@@ -1,6 +1,11 @@
+let attempts = 0;
+let locked = false;
 document.getElementById("loginForm").addEventListener("submit", function(e){
     e.preventDefault();
-
+if (locked) {
+   document.getElementById("errorMsg").innerHTML = "🔒 Account Locked. Wait 30 sec";
+   return;
+}
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
     let errorMsg = document.getElementById("errorMsg");
