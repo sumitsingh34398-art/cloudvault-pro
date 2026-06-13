@@ -85,6 +85,12 @@ if (userEmail) {
    document.getElementById("welcomeText").innerHTML =
       "Welcome " + userEmail.split("@")[0] + " 👋";
 }
+    let savedName = localStorage.getItem("username");
+
+if(savedName){
+  document.getElementById("welcomeText").innerHTML =
+  "Welcome " + savedName + " 👋";
+}
 const upload = document.getElementById("fileUpload");
     const dropArea = document.getElementById("dropArea");
 const list = document.getElementById("fileList");
