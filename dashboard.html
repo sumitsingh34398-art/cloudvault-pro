@@ -301,7 +301,15 @@ localStorage.setItem("theme","dark");
 function closePopup() {
    document.getElementById("paymentPopup").style.display = "none";
 }
+function showQR() {
+    document.getElementById("qrSection").style.display = "block";
+    document.getElementById("upiSection").style.display = "none";
+}
 
+function showUPI() {
+    document.getElementById("upiSection").style.display = "block";
+    document.getElementById("qrSection").style.display = "none";
+}
 function buyPlan() {
   document.getElementById("paymentPopup").innerHTML = `
     <div class="popup-box">
