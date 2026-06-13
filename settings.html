@@ -36,8 +36,8 @@ function resetStorage(){
    localStorage.setItem("storage", 0);
    alert("Storage Reset");
 }
-function saveName(){alert("button working");
- }
+function saveName(){
+let newName = document.getElementByid("nameInput").value;
    localStorage.setItem("username", newName);
 
    alert("Name Saved Successfully");
