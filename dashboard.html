@@ -305,7 +305,11 @@ function showQR() {
     document.getElementById("qrSection").style.display = "block";
     document.getElementById("upiSection").style.display = "none";
 }
-
+function copyUPI() {
+    navigator.clipboard.writeText("9602697303-2@ybl");
+    alert("UPI ID Copied Successfully ✅");
+}
+    
 function showUPI() {
     document.getElementById("upiSection").style.display = "block";
     document.getElementById("qrSection").style.display = "none";
@@ -338,6 +342,7 @@ function buyPlan() {
 
 <div id="upiSection" style="display:none; margin-top:10px;">
     <p>UPI ID: 9602697303-2@ybl</p>
+    <button onclick="copyUPI()">Copy UPI</button>
 </div>
       <p>Free → 100GB</p>
       <p>Pro → 1TB</p>
