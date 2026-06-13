@@ -27,12 +27,6 @@
 
 <script>
 
-function changeName(){
-   let name = document.getElementById("newName").value;
-   localStorage.setItem("username", name);
-   alert("Name Updated");
-}
-
 function clearHistory(){
    localStorage.removeItem("history");
    alert("History Cleared");
@@ -42,7 +36,6 @@ function resetStorage(){
    localStorage.setItem("storage", 0);
    alert("Storage Reset");
 }
-<script>
 function saveName() {
    let newName = document.getElementById("nameInput").value;
 
