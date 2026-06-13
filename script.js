@@ -16,6 +16,7 @@ if (locked) {
          attempts = 0;
         localStorage.setItem("userEmail", email);
         window.location.href = "dashboard.html";
+    }
    else {
    attempts++;
    errorMsg.innerHTML = "❌ Wrong Password | Attempt: " + attempts + "/3";
