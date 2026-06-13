@@ -28,20 +28,19 @@
 <script>
 
 function clearHistory(){
-   localStorage.removeItem("history");
-   alert("History Cleared");
+    localStorage.removeItem("history");
+    alert("History Cleared");
 }
 
 function resetStorage(){
-   localStorage.setItem("storage", 0);
-   alert("Storage Reset");
+    localStorage.setItem("storage", 0);
+    alert("Storage Reset");
 }
-function saveName(){
-let newName = 
-    document.getElementById("nameInput").value;
-   localStorage.setItem("username", newName);
 
-   alert("Name Saved Successfully");
+function saveName(){
+    let newName = document.getElementById("nameInput").value;
+    localStorage.setItem("username", newName);
+    alert("Name Saved Successfully");
 }
 
 </script>
