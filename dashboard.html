@@ -176,6 +176,12 @@ dropArea.addEventListener("drop", function(e){
     function previewFile(fileURL){
     window.open(fileURL, "_blank");
 }
+    function downloadFile(fileURL, fileName){
+    let a = document.createElement("a");
+    a.href = fileURL;
+    a.download = fileName;
+    a.click();
+}
     </script>
 </body>
 </html>
