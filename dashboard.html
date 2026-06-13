@@ -328,6 +328,13 @@ function buyPlan() {
     </div>
   `;
 }
+    function shareFile() {
+   if(localStorage.getItem("premiumUser") === "true") {
+      alert("Share Link Created ✅ https://cloudvault/share/abc123");
+   } else {
+      alert("Upgrade to Premium to use Share Feature 💎");
+   }
+}
    window.onload = function() {
    if(localStorage.getItem("premiumUser") === "true") {
       document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
