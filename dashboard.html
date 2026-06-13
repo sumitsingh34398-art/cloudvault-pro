@@ -86,8 +86,12 @@ else if (fileName.endsWith(".zip")) {
 else if (fileName.endsWith(".txt")) {
    icon = "📝";
 }
-li.innerHTML = icon + " " + fileName + 
-' <button onclick="removeFile(this)">❌</button>';
+let fileURL = URL.createObjectURL(upload.files[0]);
+
+li.innerHTML =
+'<span onclick="previewFile(\'' + fileURL + '\')" style="cursor:pointer;">'
++ icon + " " + fileName +
+'</span> <button onclick="removeFile(this)">❌</button>';
         list.appendChild(li);
         document.getElementById("fileError").innerHTML = "";
        let fileSize = upload.files[0].size / (1024 * 1024 * 1024); 
