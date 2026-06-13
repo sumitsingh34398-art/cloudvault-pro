@@ -187,13 +187,24 @@ dropArea.addEventListener("drop", function(e){
     a.download = fileName;
     a.click();
 }
-    #themeToggle{
-   padding: 8px 12px;
-   border: none;
-   border-radius: 8px;
-   cursor: pointer;
-   margin-bottom: 10px;
-}
+  const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", function(){
+
+    if(document.body.style.background === "white"){
+
+        document.body.style.background = "#0b1f5e";
+        document.body.style.color = "white";
+        themeToggle.innerHTML = "🌙 Dark";
+
+    } else {
+
+        document.body.style.background = "white";
+        document.body.style.color = "black";
+        themeToggle.innerHTML = "☀️ Light";
+    }
+
+});
     </script>
 </body>
 </html>
