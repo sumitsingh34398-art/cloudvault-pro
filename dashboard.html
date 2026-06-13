@@ -136,6 +136,9 @@ li.innerHTML =
 
 '<button onclick="removeFile(this)">❌</button>';
         list.appendChild(li);
+        let history = JSON.parse(localStorage.getItem("history")) || [];
+history.push("Uploaded: " + fileName);
+localStorage.setItem("history", JSON.stringify(history));
         notify.innerHTML = "✅ File Uploaded Successfully";
 
 setTimeout(function(){
