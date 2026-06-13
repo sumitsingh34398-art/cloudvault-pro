@@ -230,15 +230,17 @@ themeToggle.addEventListener("click", function(){
     if(document.body.style.background === "white"){
 
         document.body.style.background = "#0b1f5e";
+        
         document.body.style.color = "white";
 
         dashboardBox.style.background = "rgba(255,255,255,0.15)";
 
         themeToggle.innerHTML = "🌙 Dark";
-
+localStorage.setItem("theme","dark");
     } else {
 
         document.body.style.background = "white";
+        localStorage.setItem("theme","light");
         document.body.style.color = "black";
 
         dashboardBox.style.background = "#e5e7eb";
