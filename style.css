@@ -138,3 +138,9 @@ input{
     margin-bottom: 10px;
     font-weight: bold;
 }
+#fileError{
+   color: red;
+   font-size: 14px;
+   font-weight: bold;
+   margin: 8px 0;
+}
