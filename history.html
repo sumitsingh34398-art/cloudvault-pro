@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity History</title>
-    <link rel="stylesheet" href="style.css">
+<title>History</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="profile-card">
 
-    <h2>📜 Activity History</h2>
+<h2>📜 Activity History</h2>
 
-    <ul id="historyList"></ul>
+<ul id="historyList"></ul>
 
-    <button onclick="window.location.href='dashboard.html'">
-        Back to Dashboard
-    </button>
+<button onclick="window.location.href='dashboard.html'">
+Back to Dashboard
+</button>
 
 </div>
 
@@ -27,9 +26,9 @@ let history = JSON.parse(localStorage.getItem("history")) || [];
 let list = document.getElementById("historyList");
 
 history.forEach(function(item){
-    let li = document.createElement("li");
-    li.innerHTML = item;
-    list.appendChild(li);
+   let li = document.createElement("li");
+   li.innerHTML = item;
+   list.appendChild(li);
 });
 
 </script>
