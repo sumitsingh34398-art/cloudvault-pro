@@ -51,9 +51,18 @@
     <h3>Your Files</h3>
 
 <ul id="fileList">
-  <li>📄 Resume.pdf <button onclick="this.parentElement.remove()">❌</button></li>
-  <li>📷 Photo.png <button onclick="this.parentElement.remove()">❌</button></li>
-  <li>🎵 Song.mp3 <button onclick="this.parentElement.remove()">❌</button></li>
+ <li>📄 Resume.pdf 
+<button onclick="lockFile()">🔒</button> 
+<button onclick="this.parentElement.remove()">❌</button>
+</li>
+  <li>📷 Photo.png 
+<button onclick="lockFile()">🔒</button> 
+<button onclick="this.parentElement.remove()">❌</button>
+</li>
+ <li>🎵 Song.mp3 
+<button onclick="lockFile()">🔒</button> 
+<button onclick="this.parentElement.remove()">❌</button>
+</li>
 </ul>
     <!-- Logout -->
     <h3>Storage Plans 💎</h3>
