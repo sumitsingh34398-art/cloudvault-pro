@@ -169,6 +169,9 @@ dropArea.addEventListener("drop", function(e){
 
     upload.dispatchEvent(new Event("change"));
 });
+    function previewFile(fileURL){
+    window.open(fileURL, "_blank");
+}
     </script>
 </body>
 </html>
