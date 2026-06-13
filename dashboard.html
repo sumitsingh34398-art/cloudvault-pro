@@ -276,7 +276,11 @@ function closePopup() {
 }
 
 function buyPlan() {
-   alert("Payment Gateway Coming Soon 💎");
+   document.querySelector(".popup-box").innerHTML = `
+      <h2>Payment Successful ✅</h2>
+      <p>Welcome to CloudVault Pro Premium</p>
+      <button onclick="closePopup()">Done</button>
+   `;
 }
     </script>
     <div id="upgradePopup" style="display:none;">
