@@ -75,6 +75,7 @@ let storage = 20;
 const storageText = document.getElementById("storageText");
 const storageBar = document.getElementById("storageBar");
     const fileCount = document.getElementById("fileCount");
+    const notify = document.getElementById("notify");
 let totalFiles = 3;
     const maxFiles = 10;
 upload.addEventListener("change", function () {
@@ -120,6 +121,11 @@ li.innerHTML =
 
 '<button onclick="removeFile(this)">❌</button>';
         list.appendChild(li);
+        notify.innerHTML = "✅ File Uploaded Successfully";
+
+setTimeout(function(){
+   notify.innerHTML = "";
+}, 3000);
         document.getElementById("fileError").innerHTML = "";
        let fileSize = upload.files[0].size / (1024 * 1024 * 1024); 
 storage = storage + fileSize;
