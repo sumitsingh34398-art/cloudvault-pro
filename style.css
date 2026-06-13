@@ -228,3 +228,9 @@ li{
    transition: 0.3s;
    cursor: pointer;
 }
+#notify{
+   color: lightgreen;
+   font-weight: bold;
+   margin-bottom: 10px;
+   min-height: 20px;
+}
