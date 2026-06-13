@@ -89,6 +89,7 @@ else if (fileName.endsWith(".txt")) {
 li.innerHTML = icon + " " + fileName + 
 ' <button onclick="removeFile(this)">❌</button>';
         list.appendChild(li);
+        document.getElementById("fileError").innerHTML = "";
        let fileSize = upload.files[0].size / (1024 * 1024 * 1024); 
 storage = storage + fileSize;
 
