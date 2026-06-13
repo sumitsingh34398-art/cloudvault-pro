@@ -254,11 +254,15 @@ li{
 }
 .dashboard{
     display:flex;
-    gap:20px;
+    gap:40px;
+    width:900px;
+    align-items:flex-start;
+    padding:30px;
 }
 
 .sidebar{
-    width:220px;
+    width:180px;
+    min-height:600px;
     background:#1b2a4a;
     padding:20px;
     border-radius:12px;
@@ -278,4 +282,5 @@ li{
 
 .main-content{
     flex:1;
+    min-width:500px;
 }
