@@ -217,6 +217,11 @@ dropArea.addEventListener("drop", function(e){
     a.href = fileURL;
     a.download = fileName;
     a.click();
+        notify.innerHTML = "⬇ Download Started";
+
+setTimeout(function(){
+   notify.innerHTML = "";
+}, 3000);
 }
   const themeToggle = document.getElementById("themeToggle");
 const dashboardBox = document.getElementById("dropArea");
