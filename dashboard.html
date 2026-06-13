@@ -56,7 +56,8 @@ let totalFiles = 3;
     const maxFiles = 10;
 upload.addEventListener("change", function () {
     if (totalFiles >= maxFiles) {
-    alert("❌ File limit reached (Max 10 files)");
+   document.getElementById("fileError").innerHTML =
+"❌ File limit reached (Max 10 files)";
     return;
 }
     if (upload.files.length > 0) {
