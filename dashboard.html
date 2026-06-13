@@ -316,6 +316,7 @@ function showUPI() {
 }
 function buyPlan() {
     document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
+    localStorage.setItem("premiumUser","true");
   document.getElementById("paymentPopup").innerHTML = `
     <div class="popup-box">
       <h2>Payment Successful ✅</h2>
@@ -325,6 +326,11 @@ function buyPlan() {
     </div>
   `;
 }
+   window.onload = function() {
+   if(localStorage.getItem("premiumUser") === "true") {
+      document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
+   }
+} 
     </script>
    
    <div id="paymentPopup" style="display:none;">
