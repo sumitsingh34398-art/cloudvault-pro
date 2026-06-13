@@ -276,7 +276,13 @@ function closePopup() {
 }
 
 function buyPlan() {
-alert("HELLO");
+   document.querySelector(".popup-box").innerHTML =
+   `
+   <h2>Payment Successful ✅</h2>
+   <p>You are now Premium User</p>
+   <p>Storage Upgraded to 1TB 💎</p>
+   <button onclick="closePopup()">Done</button>
+   `;
 }
     </script>
     <div id="upgradePopup" style="display:none;">
