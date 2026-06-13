@@ -12,7 +12,7 @@
 
     <h1>👤 My Profile</h1>
 
-    <p><strong>Name:</strong> Sumit Singh</p>
+    <p><strong>Name:</strong> <span id="userName"></span></p>
 
     <p><strong>Email:</strong> <span id="userEmail"></span></p>
 
@@ -29,8 +29,13 @@
 </div>
 
 <script>
-   document.getElementById("userEmail").innerHTML =
-   localStorage.getItem("userEmail");
+  let email = localStorage.getItem("userEmail");
+
+document.getElementById("userEmail").innerHTML = email;
+
+let name = email.split("@")[0];
+
+document.getElementById("userName").innerHTML = name;
 </script>
 
 </body>
