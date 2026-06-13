@@ -42,6 +42,14 @@ function resetStorage(){
    localStorage.setItem("storage", 0);
    alert("Storage Reset");
 }
+<script>
+function saveName() {
+   let newName = document.getElementById("nameInput").value;
+
+   localStorage.setItem("username", newName);
+
+   alert("Name Saved Successfully");
+}
 
 </script>
 
