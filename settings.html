@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="settings-box">
+
+    <h2>⚙ Settings</h2>
+
+    <p>Change Username</p>
+    <input type="text" id="newName" placeholder="Enter new name">
+
+    <button onclick="changeName()">Save Name</button>
+
+    <button onclick="clearHistory()">Clear History</button>
+
+    <button onclick="resetStorage()">Reset Storage</button>
+
+    <button onclick="window.location.href='dashboard.html'">
+        Back to Dashboard
+    </button>
+
+</div>
+
+<script>
+
+function changeName(){
+   let name = document.getElementById("newName").value;
+   localStorage.setItem("username", name);
+   alert("Name Updated");
+}
+
+function clearHistory(){
+   localStorage.removeItem("history");
+   alert("History Cleared");
+}
+
+function resetStorage(){
+   localStorage.setItem("storage", 0);
+   alert("Storage Reset");
+}
+
+</script>
+
+</body>
+</html>
