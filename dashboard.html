@@ -188,19 +188,25 @@ dropArea.addEventListener("drop", function(e){
     a.click();
 }
   const themeToggle = document.getElementById("themeToggle");
-
+const dashboardBox = document.getElementById("dropArea");
 themeToggle.addEventListener("click", function(){
 
     if(document.body.style.background === "white"){
 
         document.body.style.background = "#0b1f5e";
         document.body.style.color = "white";
+
+        dashboardBox.style.background = "rgba(255,255,255,0.15)";
+
         themeToggle.innerHTML = "🌙 Dark";
 
     } else {
 
         document.body.style.background = "white";
         document.body.style.color = "black";
+
+        dashboardBox.style.background = "#e5e7eb";
+
         themeToggle.innerHTML = "☀️ Light";
     }
 
