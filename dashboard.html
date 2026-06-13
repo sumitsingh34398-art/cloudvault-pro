@@ -223,6 +223,20 @@ setTimeout(function(){
    notify.innerHTML = "";
 }, 3000);
 }
+    let savedTheme = localStorage.getItem("theme");
+
+if(savedTheme === "dark"){
+
+   document.body.style.background = "#0b1f5e";
+   document.body.style.color = "white";
+
+}
+else if(savedTheme === "light"){
+
+   document.body.style.background = "white";
+   document.body.style.color = "black";
+
+}
   const themeToggle = document.getElementById("themeToggle");
 const dashboardBox = document.getElementById("dropArea");
 themeToggle.addEventListener("click", function(){
