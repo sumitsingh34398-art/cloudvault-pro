@@ -58,7 +58,7 @@
 </div>
 
 <button id="upgradeBtn">Upgrade Plan</button>
-
+<button onclick="logoutUser()">Logout</button>
 </div>
 <script>
     let userEmail = localStorage.getItem("userEmail");
@@ -232,6 +232,10 @@ themeToggle.addEventListener("click", function(){
     }
 
 });
+    function logoutUser(){
+   localStorage.removeItem("userEmail");
+   window.location.href = "index.html";
+}
     </script>
 </body>
 </html>
