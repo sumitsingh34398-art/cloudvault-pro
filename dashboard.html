@@ -345,6 +345,14 @@ function buyPlan() {
       alert("Upgrade to Premium to use Share Feature 💎");
    }
 }
+    function lockFile() {
+   if(localStorage.getItem("premiumUser") === "true") {
+      let code = prompt("Enter Lock Code (4 digits)");
+      alert("File Locked Successfully 🔒 Code: " + code);
+   } else {
+      alert("Only Premium User Can Lock Files 💎");
+   }
+}
    window.onload = function() {
    if(localStorage.getItem("premiumUser") === "true") {
       document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
