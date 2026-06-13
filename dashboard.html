@@ -142,7 +142,11 @@ storageBar.style.width = storage + "%";
     return;
 }
    btn.parentElement.remove();
+notify.innerHTML = "⬇ Download Started";
 
+setTimeout(function(){
+   notify.innerHTML = "";
+}, 3000);
    storage--;
 totalFiles--;
 fileCount.innerHTML = "Total Files: " + totalFiles;
