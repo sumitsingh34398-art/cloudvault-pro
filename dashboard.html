@@ -319,11 +319,18 @@ function buyPlan() {
   <div class="popup-box">
 
       <h2>Upgrade Plan 💎</h2>
-<img src="AccountQRCodeState Bank of India - 1203_DARK_THEME.png" width="180" style="display:block; margin:auto;">
+<button onclick="showQR()">Pay with QR</button>
 
-<p>Scan QR To Pay</p>
+<button onclick="showUPI()">Pay with UPI</button>
 
-<p>UPI ID: 9602697303-2@ybl</p>
+<div id="qrSection" style="display:none; margin-top:10px;">
+    <img src="AccountQRCodeState Bank of India - 1203_DARK_THEME.png" width="180">
+    <p>Scan QR To Pay</p>
+</div>
+
+<div id="upiSection" style="display:none; margin-top:10px;">
+    <p>UPI ID: 9602697303-2@ybl</p>
+</div>
       <p>Free → 100GB</p>
       <p>Pro → 1TB</p>
       <p>Enterprise → Unlimited</p>
