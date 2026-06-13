@@ -327,7 +327,8 @@ function buyPlan() {
     document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
     document.getElementById("welcomeText").innerText = "Welcome Back 👋 Premium User 💎";
     localStorage.setItem("premiumUser","true");
-    document.getElementById("upgradeBtn").style.display="none"
+    document.getElementById("fileCount").innerText = "Total Files: Unlimited ♾️";
+    document.getElementById("upgradeBtn").style.display="none";
     document.getElementById("shareBtn").style.display="block";
   document.getElementById("paymentPopup").innerHTML = `
     <div class="popup-box">
@@ -355,6 +356,7 @@ function buyPlan() {
 }
    window.onload = function() {
    if(localStorage.getItem("premiumUser") === "true") {
+       document.getElementById("fileCount").innerText = "Total Files: Unlimited ♾️";
       document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
        document.getElementById("welcomeText").innerText = "Welcome Back 👋 Premium User 💎";
        document.getElementById("upgradeBtn").style.display="none";
