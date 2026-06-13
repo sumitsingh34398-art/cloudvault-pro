@@ -12,7 +12,7 @@
 
     <p>Change Username</p>
     <input type="text" id="nameInput" placeholder="Enter new name">
-
+    }
     <button onclick="saveName()">Save Name</button>
 
     <button onclick="clearHistory()">Clear History</button>
@@ -36,9 +36,8 @@ function resetStorage(){
    localStorage.setItem("storage", 0);
    alert("Storage Reset");
 }
-function saveName() {
-   let newName = document.getElementById("nameInput").value;
-
+function saveName(){alert("button working");
+ }
    localStorage.setItem("username", newName);
 
    alert("Name Saved Successfully");
