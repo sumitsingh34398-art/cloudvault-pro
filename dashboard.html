@@ -109,6 +109,9 @@ storageBar.style.width = storage + "%";
 });
     
     function removeFile(btn){
+        if(!confirm("Are you sure you want to delete this file?")){
+    return;
+}
    btn.parentElement.remove();
 
    storage--;
