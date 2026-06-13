@@ -21,7 +21,7 @@
         <button onclick="window.location.href='settings.html'">
 ⚙ Settings
 </button>
-    <button onclick="openPopup()">💎 Upgrade</button>
+    <button id="upgradeBtn" onclick="openPopup()">💎 Upgrade</button>
 
     <button onclick="logoutUser()">🚪 Logout</button>
 
@@ -318,6 +318,7 @@ function buyPlan() {
     document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
     document.getElementById("welcomeText").innerText = "Welcome Back 👋 Premium User 💎";
     localStorage.setItem("premiumUser","true");
+    document.getElementById("upgradeBtn").style.display="none"
   document.getElementById("paymentPopup").innerHTML = `
     <div class="popup-box">
       <h2>Payment Successful ✅</h2>
