@@ -267,6 +267,17 @@ localStorage.setItem("theme","dark");
    localStorage.removeItem("userEmail");
    window.location.href = "index.html";
 }
+    function openPopup() {
+   document.getElementById("paymentPopup").style.display = "block";
+}
+
+function closePopup() {
+   document.getElementById("paymentPopup").style.display = "none";
+}
+
+function buyPlan() {
+   alert("Payment Gateway Coming Soon 💎");
+}
     </script>
     <div id="upgradePopup" style="display:none;">
 
@@ -299,6 +310,23 @@ localStorage.setItem("theme","dark");
       <button onclick="closePopup()">Cancel</button>
 
   </div>
+
+</div>
+    <div id="paymentPopup" style="display:none;">
+
+   <div class="popup-box">
+
+      <h2>Upgrade Plan 💎</h2>
+
+      <p>Free → 100GB</p>
+      <p>Pro → 1TB</p>
+      <p>Enterprise → Unlimited</p>
+
+      <button onclick="buyPlan()">Buy Now</button>
+
+      <button onclick="closePopup()">Cancel</button>
+
+   </div>
 
 </div>
 </body>
