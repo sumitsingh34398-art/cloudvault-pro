@@ -12,26 +12,24 @@ if (locked) {
 
     let correctPassword = "123456";
 
-    if(password === correctPassword){
-         attempts = 0;
-        localStorage.setItem("userEmail", email);
-        window.location.href = "dashboard.html";
+ if(password === correctPassword){
+    attempts = 0;
+    localStorage.setItem("userEmail", email);
+    window.location.href = "dashboard.html";
+} else {
+    attempts++;
+
+    errorMsg.innerHTML = "❌ Wrong Password | Attempt: " + attempts + "/3";
+
+    if(attempts >= 3){
+        locked = true;
+        errorMsg.innerHTML = "🔒 Account Locked for 30 sec";
+
+        setTimeout(function() {
+            locked = false;
+            attempts = 0;
+            errorMsg.innerHTML = "";
+        }, 30000);
     }
-   else {
-   attempts++;
-   errorMsg.innerHTML = "❌ Wrong Password | Attempt: " + attempts + "/3";
-
-   if (attempts >= 3) {
-      locked = true;
-      document.getElementById("loginBtn").disabled = true;
-      errorMsg.innerHTML = "🔒 Account Locked for 30 sec";
-
-      setTimeout(function() {
-         locked = false;
-         attempts = 0;
-         document.getElementById("loginBtn").disabled = false;
-         errorMsg.innerHTML = "";
-      }, 30000);
-   }
 }
 });
