@@ -22,7 +22,7 @@
 ⚙ Settings
 </button>
     <button id="upgradeBtn" onclick="openPopup()">💎 Upgrade</button>
-<button onclick="shareFile()">shareFile</button>
+<button id="shareBtn" onclick="shareFile()" style="display:none;">📤 Share File</button>
     <button onclick="logoutUser()">🚪 Logout</button>
 
 </div>
@@ -319,6 +319,7 @@ function buyPlan() {
     document.getElementById("welcomeText").innerText = "Welcome Back 👋 Premium User 💎";
     localStorage.setItem("premiumUser","true");
     document.getElementById("upgradeBtn").style.display="none"
+    document.getElementById("shareBtn").style.display="block";
   document.getElementById("paymentPopup").innerHTML = `
     <div class="popup-box">
       <h2>Payment Successful ✅</h2>
@@ -340,6 +341,7 @@ function buyPlan() {
       document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
        document.getElementById("welcomeText").innerText = "Welcome Back 👋 Premium User 💎";
        document.getElementById("upgradeBtn").style.display="none";
+       document.getElementById("shareBtn").style.display="block";
    }
 } 
    
