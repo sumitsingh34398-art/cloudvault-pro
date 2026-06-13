@@ -349,8 +349,13 @@ function buyPlan() {
     function lockFile() {
    if(localStorage.getItem("premiumUser") === "true") {
       let code = prompt("Enter Lock Code (4 digits)");
+       if(code.length == 4){
       alert("File Locked Successfully 🔒 Code: " + code);
-   } else {
+       }
+      else {
+           alert("Please Enter 4 Digit Code");
+       }
+    else {
       alert("Only Premium User Can Lock Files 💎");
    }
 }
