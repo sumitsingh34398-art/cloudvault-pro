@@ -225,7 +225,7 @@ dropArea.addEventListener("drop", function(e) {
   if (file) {
     let li = document.createElement("li");
     li.innerHTML = "📂 " + file.name +
-      ' <button onclick="removeFile(this)">❌</button>';
+      ' <button onclick="removeFile(this, fileName)">❌</button>';
 
     list.appendChild(li);
 
@@ -368,12 +368,12 @@ function buyPlan() {
       alert("Upgrade to Premium to use Share Feature 💎");
    }
 }
-    function lockFile() {
+    function lockFile(fileName) {
    if(localStorage.getItem("premiumUser") === "true") {
       let code = prompt("Enter Lock Code (4 digits)");
        if(code.length == 4){
       alert("File Locked Successfully 🔒 Code: " + code);
-           localStorage.setItem("fileLockCode",code);
+           localStorage.setItem("fileLock_" + fileName, code);
     
    }  else {
            alert("Please Enter 4 Digit Code");
