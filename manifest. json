@@ -23,5 +23,22 @@
     "type": "image/png",
 "purpose": "any maskable"
   }
+],
+"screenshots": [
+  {
+    "src": "screenshot1.png",
+    "sizes": "449x505",
+    "type": "image/png"
+  },
+  {
+    "src": "screenshot2.png",
+    "sizes": "905x653",
+    "type": "image/png"
+  },
+  {
+    "src": "screenshot3.png",
+    "sizes": "461x484",
+    "type": "image/png"
+  }
 ]
 }
