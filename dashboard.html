@@ -363,6 +363,10 @@ function buyPlan() {
    }
 }
    window.onload = function() {
+       let savedLock = localStorage.getItem("fileLockCode");
+if(savedLock){
+    alert("Some files are locked 🔒");
+}
    if(localStorage.getItem("premiumUser") === "true") {
        document.getElementById("fileCount").innerText = "Total Files: Unlimited ♾️";
       document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
