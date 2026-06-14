@@ -152,7 +152,7 @@ else if (fileName.endsWith(".txt")) {
 let fileURL = URL.createObjectURL(upload.files[0]);
 
 li.innerHTML =
-   '<span onclick="previewFile(\'' + fileURL + '\')" style="cursor:pointer;">'
+   '<span onclick="previewFile(\'' + fileURL + '\', \'' + fileName + '\')" style="cursor:pointer;">'
    + icon + " " + fileName +
    '</span>' +
 
@@ -253,9 +253,9 @@ dropArea.addEventListener("drop", function(e){
 
     upload.dispatchEvent(new Event("change"));
 });
-  function previewFile(fileURL){
+  function previewFile(fileURL, fileName){
 
-    let savedLock = localStorage.getItem("fileLockCode");
+    let savedLock = localStorage.getItem("fileLock_" + fileName);
 
     if(savedLock){
         let enteredCode = prompt("Enter Lock Code");
