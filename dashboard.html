@@ -353,6 +353,8 @@ function buyPlan() {
       let code = prompt("Enter Lock Code (4 digits)");
        if(code.length == 4){
       alert("File Locked Successfully 🔒 Code: " + code);
+           localStorage.setItem("fileLockCode",code);
+       }
    }  else {
            alert("Please Enter 4 Digit Code");
        }
