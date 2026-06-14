@@ -146,13 +146,15 @@ else if (fileName.endsWith(".txt")) {
 let fileURL = URL.createObjectURL(upload.files[0]);
 
 li.innerHTML =
-'<span onclick="previewFile(\'' + fileURL + '\')" style="cursor:pointer;">'
-+ icon + " " + fileName +
-'</span> ' +
+   '<span onclick="previewFile(\'' + fileURL + '\')" style="cursor:pointer;">'
+   + icon + " " + fileName +
+   '</span>' +
 
-'<button onclick="downloadFile(\'' + fileURL + '\', \'' + fileName + '\')">⬇</button> ' +
+   '<button onclick="lockFile()">🔒</button>' +
 
-'<button onclick="removeFile(this)">❌</button>';
+   '<button onclick="downloadFile(\'' + fileURL + '\', \'' + fileName + '\')">⬇️</button>' +
+
+   '<button onclick="removeFile(this)">❌</button>';
         list.appendChild(li);
         let history = JSON.parse(localStorage.getItem("history")) || [];
 history.push("Uploaded: " + fileName);
