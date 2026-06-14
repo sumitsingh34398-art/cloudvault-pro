@@ -9,6 +9,7 @@
   "theme_color": "#000000",
 "orientation": "portrait",
   "description": "Secure cloud storage app",
+"categories": ["productivity", "utilities"],
  "icons": [
   {
     "src": "icon-192.png",
