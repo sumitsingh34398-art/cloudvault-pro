@@ -51,7 +51,13 @@
     <h3>Your Files</h3>
 
 <ul id="fileList">
- <li>📄 Resume.pdf 
+ <li>
+<span onclick="previewFile('resume.pdf')" style="cursor:pointer;">
+📄 Resume.pdf
+</span>
+<button onclick="lockFile()">🔒</button>
+<button onclick="this.parentElement.remove()">❌</button>
+</li>
 <button onclick="lockFile()">🔒</button> 
 <button onclick="this.parentElement.remove()">❌</button>
 </li>
