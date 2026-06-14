@@ -247,8 +247,22 @@ dropArea.addEventListener("drop", function(e){
 
     upload.dispatchEvent(new Event("change"));
 });
-    function previewFile(fileURL){
-    window.open(fileURL, "_blank");
+  function previewFile(fileURL){
+
+    let savedLock = localStorage.getItem("fileLockCode");
+
+    if(savedLock){
+        let enteredCode = prompt("Enter Lock Code");
+
+        if(enteredCode === savedLock){
+            window.open(fileURL, "_blank");
+        } else {
+            alert("Wrong Password 🔒");
+        }
+
+    } else {
+        window.open(fileURL, "_blank");
+    }
 }
     function downloadFile(fileURL, fileName){
     let a = document.createElement("a");
