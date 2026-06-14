@@ -2,9 +2,11 @@
   "name": "CloudVault Pro",
   "short_name": "CloudVault",
   "start_url": "./",
+"id": "/cloudvault-pro/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
+"orientation": "portrait",
   "description": "Secure cloud storage app",
  "icons": [
   {
