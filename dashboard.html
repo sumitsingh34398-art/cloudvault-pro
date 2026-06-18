@@ -149,6 +149,8 @@ return;
         alert("File Uploaded Successfully");
         console.log(data);
     }
+    });
+        console.log("reached after upload");
     
     if (upload.files.length > 0) {
         let li = document.createElement("li");
@@ -176,7 +178,7 @@ else if (fileName.endsWith(".zip")) {
 else if (fileName.endsWith(".txt")) {
    icon = "📝";
 }
-let fileURL = data.fullpath;
+let fileURL = data.path;
 
 li.innerHTML =
 '<span onclick="previewFile(\'' + fileURL + '\', \'' + fileName + '\')" style="cursor:pointer;">'
@@ -200,7 +202,7 @@ let files = JSON.parse(
 
 files.push({
     name: fileName,
-    data: fileURL
+    data: data.path
 });
 
 localStorage.setItem(
