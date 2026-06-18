@@ -406,10 +406,10 @@ localStorage.setItem(
     function shareFile() {
   let currentUser = localStorage.getItem("userEmail");
 
-localStorage.setItem(
+if(localStorage.setItem(
   "premiumUser_" + currentUser,
-  "true"
-); {
+  "true")
+ {
       alert("Share Link Created ✅ https://cloudvault/share/abc123");
    } else {
       alert("Upgrade to Premium to use Share Feature 💎");
@@ -421,7 +421,7 @@ localStorage.setItem(
 localStorage.setItem(
   "premiumUser_" + currentUser,
   "true"
-); {
+); 
       let code = prompt("Enter Lock Code (4 digits)");
        if(code.length == 4){
       alert("File Locked Successfully 🔒 Code: " + code);
