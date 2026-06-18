@@ -120,7 +120,7 @@ let totalFiles = 3;
     const maxFiles = 10;
 upload.addEventListener("change", function (e) {
     let file = e.target.files[0]
-    
+    /*
      let reader = new FileReader();
 
 reader.onload = function() {
@@ -138,6 +138,7 @@ reader.onload = function() {
 }
 
 reader.readAsDataURL(file);
+*/
     if (totalFiles >= maxFiles) {
    document.getElementById("fileError").innerHTML =
 "❌ File limit reached (Max 10 files)";
