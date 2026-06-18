@@ -416,7 +416,12 @@ localStorage.setItem(
    }
 }
     function lockFile(fileName) {
-   if(localStorage.getItem("premiumUser") === "true") {
+   let currentUser = localStorage.getItem("userEmail");
+
+localStorage.setItem(
+  "premiumUser_" + currentUser,
+  "true"
+); {
       let code = prompt("Enter Lock Code (4 digits)");
        if(code.length == 4){
       alert("File Locked Successfully 🔒 Code: " + code);
