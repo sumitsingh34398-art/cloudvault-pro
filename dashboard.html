@@ -118,7 +118,13 @@ const storageBar = document.getElementById("storageBar");
     const notify = document.getElementById("notify");
 let totalFiles = 3;
     const maxFiles = 10;
-upload.addEventListener("change", function () {
+upload.addEventListener("change", function (e) {
+    let file = e.target.files[0]
+    
+     savedFiles.push({
+        name: file.name
+    });
+    localStorage.setItem("myFiles",JSON.stringify(savedFiles));
     if (totalFiles >= maxFiles) {
    document.getElementById("fileError").innerHTML =
 "❌ File limit reached (Max 10 files)";
@@ -384,6 +390,14 @@ function buyPlan() {
    }
 }
    window.onload = function() {
+       let file = 
+           JSON.parse(localStorage.getItem("myFiles")) ||[];
+       files.forEach(file=> {
+           let li = 
+               document.createElement("li");
+           li.innerHTML = file.name;
+           list.appendChild(li);
+       });
 
    if(localStorage.getItem("premiumUser") === "true") {
        document.getElementById("fileCount").innerText = "Total Files: Unlimited ♾️";
