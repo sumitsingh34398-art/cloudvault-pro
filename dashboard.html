@@ -193,6 +193,21 @@ li.innerHTML =
         let history = JSON.parse(localStorage.getItem("history")) || [];
 history.push("Uploaded: " + fileName);
 localStorage.setItem("history", JSON.stringify(history));
+        let currentUser = localStorage.getItem("userEmail");
+
+let files = JSON.parse(
+    localStorage.getItem("userFiles_" + currentUser)
+) || [];
+
+files.push({
+    name: fileName,
+    data: fileURL
+});
+
+localStorage.setItem(
+    "userFiles_" + currentUser,
+    JSON.stringify(files)
+);
         notify.innerHTML = "✅ File Uploaded Successfully";
 
 setTimeout(function(){
