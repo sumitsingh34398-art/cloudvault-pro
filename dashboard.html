@@ -105,8 +105,7 @@ if(savedName){
   "Welcome " + savedName + " 👋";
 }
     let savedFiles = 
-        JSON.parse(localStorage.getItem("myFiles"))
-    ||[];
+        JSON.parse(localStorage.getItem("myFiles"))  || [];
 const upload = document.getElementById("fileUpload");
     const dropArea = document.getElementById("dropArea");
 const list = document.getElementById("fileList");
