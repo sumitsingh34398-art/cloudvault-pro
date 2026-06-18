@@ -90,7 +90,16 @@
 </div>
 
 </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 <script>
+    const supabaseUrl = "https://kpjbmffclkdvlytnchvl.supabase.co";
+
+const supabaseKey = "sb_publishable_I3FhnSmoMfYGe0gHj-fLZQ_tap0wNfJ";
+
+const supabaseClient = supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
     let userEmail = localStorage.getItem("userEmail");
 
 if (userEmail) {
