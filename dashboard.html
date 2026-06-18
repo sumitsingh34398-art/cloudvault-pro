@@ -208,14 +208,18 @@ storageBar.style.width = storage + "%";
         if(!confirm("Are you sure you want to delete this file?")){
     return;
 }
+        let currentUser = 
+            localStorage.getItem("userEmail");
         let files =
-JSON.parse(localStorage.getItem("myFiles")) || [];
+JSON.parse(
+    localStorage.getItem("userFiles_" + currentUser)
+) || [];
 
 files =
 files.filter(f => f.name !== fileName);
 
 localStorage.setItem(
-"myFiles",
+"userFiles_" + currentUser,
 JSON.stringify(files)
 );
    btn.parentElement.remove();
