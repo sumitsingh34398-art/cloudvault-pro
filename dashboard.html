@@ -420,9 +420,13 @@ function buyPlan() {
    }
 }
   window.onload = function() {
+      let currentUser = 
+          localStorage.getItem("userEmail");
 
- let files =
- JSON.parse(localStorage.getItem("myFiles")) || [];
+JSON.parse(
+    localStorage.getItem("userFiles_" + currentUser)
+) || [];
+
 
  files.forEach(file => {
 
