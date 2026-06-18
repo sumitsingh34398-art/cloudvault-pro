@@ -197,6 +197,8 @@ totalFiles++;
 fileCount.innerHTML = "Total Files: " + totalFiles;
 storageText.innerHTML = storage + "GB / 100GB Used";
 storageBar.style.width = storage + "%";
+    }
+    });
     
     function removeFile(btn, fileName){
         if(!confirm("Are you sure you want to delete this file?")){
