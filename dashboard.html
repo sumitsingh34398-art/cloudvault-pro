@@ -122,6 +122,21 @@ let totalFiles = 3;
     const maxFiles = 10;
 upload.addEventListener("change", function (e) {
     let file = e.target.files[0]
+    upload.addEventListener("change", async function (e) {
+    let file = e.target.files[0];
+
+    const { data, error } = await supabaseClient.storage
+      .from("files")
+      .upload(file.name, file);
+
+    if (error) {
+        alert("Upload Failed");
+        console.log(error);
+    } else {
+        alert("File Uploaded Successfully");
+        console.log(data);
+    }
+});
     /*
      let reader = new FileReader();
 
