@@ -402,17 +402,36 @@ function buyPlan() {
       alert("Only Premium User Can Lock Files 💎");
    }
 }
-   window.onload = function() {
-       let file = 
-           JSON.parse(localStorage.getItem("myFiles")) ||[];
-       files.forEach(file=> {
-           let li = 
-               document.createElement("li");
-           li.innerHTML = file.name;
-           list.appendChild(li);
-       });
+  window.onload = function() {
 
-   if(localStorage.getItem("premiumUser") === "true") {
+ let files =
+ JSON.parse(localStorage.getItem("myFiles")) || [];
+
+ files.forEach(file => {
+
+   let li = document.createElement("li");
+
+   let fileURL = file.data;
+
+   li.innerHTML =
+   '<span onclick="previewFile(\'' +
+   fileURL + '\',\'' +
+   file.name + '\')">' +
+   file.name +
+   '</span>' +
+
+   '<button onclick="downloadFile(\'' +
+   fileURL + '\',\'' +
+   file.name + '\')">⬇️</button>' +
+
+   '<button onclick="removeFile(this,\'' +
+   file.name + '\')">❌</button>';
+
+   list.appendChild(li);
+
+ });
+
+ if(localStorage.getItem("premiumUser") == "true") {
        document.getElementById("fileCount").innerText = "Total Files: Unlimited ♾️";
       document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
        document.getElementById("welcomeText").innerText = "Welcome Back 👋 Premium User 💎";
