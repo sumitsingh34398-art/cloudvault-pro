@@ -103,8 +103,12 @@ if(savedName){
   document.getElementById("welcomeText").innerHTML =
   "Welcome " + savedName + " 👋";
 }
-    let savedFiles = 
-        JSON.parse(localStorage.getItem("myFiles"))  || [];
+    let currentUser = localStorage.getItem("userEmail");
+
+let savedFiles =
+JSON.parse(
+    localStorage.getItem("userFiles_" + currentUser)
+) || [];
 const upload = document.getElementById("fileUpload");
     const dropArea = document.getElementById("dropArea");
 const list = document.getElementById("fileList");
