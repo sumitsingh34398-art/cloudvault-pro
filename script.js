@@ -1,3 +1,11 @@
+const SUPABASE_URL = "https://kpjbmffclkdvlytnchvl.supabase.co";
+
+const SUPABASE_KEY = "sb_publishable_I3FhnSmoMfYGe0gHj-fLZQ_tap0wNfJ";
+
+const supabaseClient = supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
 let attempts = 0;
 let locked = false;
 document.getElementById("loginForm").addEventListener("submit", function(e){
