@@ -140,7 +140,7 @@ return;
 
     const { data, error } = await supabaseClient.storage
       .from("files")
-      .upload(file.name, file);
+      .upload(file.name, file, { upsert: true});
 
     if (error) {
         alert("Upload Failed");
