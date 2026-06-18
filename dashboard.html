@@ -432,8 +432,8 @@ if(localStorage.getItem("premiumUser_" + currentUser) == "true") {
       let currentUser = 
           localStorage.getItem("userEmail");
 
-JSON.parse(
-    localStorage.getItem("userFiles_" + currentUser)
+let files = JSON.parse(
+  localStorage.getItem("userFiles_" + currentUser)
 ) || [];
 
 
@@ -463,10 +463,7 @@ JSON.parse(
 
 let currentUser = localStorage.getItem("userEmail");
 
-localStorage.setItem(
-  "premiumUser_" + currentUser,
-  "true"
-); {
+if(localStorage.getItem("premiumUser_" + currentUser) == "true") {
        document.getElementById("fileCount").innerText = "Total Files: Unlimited ♾️";
       document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
        document.getElementById("welcomeText").innerText = "Welcome Back 👋 Premium User 💎";
