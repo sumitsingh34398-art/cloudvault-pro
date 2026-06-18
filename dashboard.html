@@ -385,7 +385,12 @@ function showUPI() {
 function buyPlan() {
     document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
     document.getElementById("welcomeText").innerText = "Welcome Back 👋 Premium User 💎";
-    localStorage.setItem("premiumUser","true");
+    let currentUser = localStorage.getItem("userEmail");
+
+localStorage.setItem(
+  "premiumUser_" + currentUser,
+  "true"
+);
     document.getElementById("fileCount").innerText = "Total Files: Unlimited ♾️";
     document.getElementById("upgradeBtn").style.display="none";
     document.getElementById("shareBtn").style.display="block";
@@ -399,7 +404,12 @@ function buyPlan() {
   `;
 }
     function shareFile() {
-   if(localStorage.getItem("premiumUser") === "true") {
+  let currentUser = localStorage.getItem("userEmail");
+
+localStorage.setItem(
+  "premiumUser_" + currentUser,
+  "true"
+); {
       alert("Share Link Created ✅ https://cloudvault/share/abc123");
    } else {
       alert("Upgrade to Premium to use Share Feature 💎");
@@ -452,7 +462,12 @@ JSON.parse(
 
  });
 
- if(localStorage.getItem("premiumUser") == "true") {
+let currentUser = localStorage.getItem("userEmail");
+
+localStorage.setItem(
+  "premiumUser_" + currentUser,
+  "true"
+); {
        document.getElementById("fileCount").innerText = "Total Files: Unlimited ♾️";
       document.getElementById("storageText").innerText = "20GB / 1TB Used 🚀";
        document.getElementById("welcomeText").innerText = "Welcome Back 👋 Premium User 💎";
