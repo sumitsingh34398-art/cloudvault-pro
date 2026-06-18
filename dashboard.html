@@ -141,25 +141,6 @@ return;
         console.log(data);
     }
 });
-    /*
-     let reader = new FileReader();
-
-reader.onload = function() {
-
-   savedFiles.push({
-      name: file.name,
-      type: file.type,
-      data: reader.result
-   });
-
-   localStorage.setItem(
-      "myFiles",
-      JSON.stringify(savedFiles)
-   );
-}
-
-reader.readAsDataURL(file);
-*/
     
     if (upload.files.length > 0) {
         let li = document.createElement("li");
