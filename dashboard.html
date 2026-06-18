@@ -121,10 +121,23 @@ let totalFiles = 3;
 upload.addEventListener("change", function (e) {
     let file = e.target.files[0]
     
-     savedFiles.push({
-        name: file.name
-    });
-    localStorage.setItem("myFiles",JSON.stringify(savedFiles));
+     let reader = new FileReader();
+
+reader.onload = function() {
+
+   savedFiles.push({
+      name: file.name,
+      type: file.type,
+      data: reader.result
+   });
+
+   localStorage.setItem(
+      "myFiles",
+      JSON.stringify(savedFiles)
+   );
+}
+
+reader.readAsDataURL(file);
     if (totalFiles >= maxFiles) {
    document.getElementById("fileError").innerHTML =
 "❌ File limit reached (Max 10 files)";
