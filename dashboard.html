@@ -180,7 +180,7 @@ li.innerHTML =
 
 '<button onclick="downloadFile(\'' + fileURL + '\', \'' + fileName + '\')">⬇️</button>' +
 
-'<button onclick="removeFile(this,'fileName')">❌</button>';
+'<button onclick="removeFile(this, \'' + fileName + '\')">❌</button>' +
         list.appendChild(li);
         let history = JSON.parse(localStorage.getItem("history")) || [];
 history.push("Uploaded: " + fileName);
@@ -216,7 +216,7 @@ localStorage.setItem(
 JSON.stringify(files)
 );
    btn.parentElement.remove();
-notify.innerHTML = "⬇ Download Started";
+notify.innerHTML = "🗑 File Deleted";
 
 setTimeout(function(){
    notify.innerHTML = "";
