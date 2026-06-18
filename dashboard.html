@@ -180,7 +180,7 @@ li.innerHTML =
 
 '<button onclick="downloadFile(\'' + fileURL + '\', \'' + fileName + '\')">⬇️</button>' +
 
-'<button onclick="removeFile(this)">❌</button>';
+'<button onclick="removeFile(this,'fileName')">❌</button>';
         list.appendChild(li);
         let history = JSON.parse(localStorage.getItem("history")) || [];
 history.push("Uploaded: " + fileName);
@@ -201,10 +201,20 @@ storageBar.style.width = storage + "%";
     }
 });
     
-    function removeFile(btn){
+    function removeFile(btn, fileName){
         if(!confirm("Are you sure you want to delete this file?")){
     return;
 }
+        let files =
+JSON.parse(localStorage.getItem("myFiles")) || [];
+
+files =
+files.filter(f => f.name !== fileName);
+
+localStorage.setItem(
+"myFiles",
+JSON.stringify(files)
+);
    btn.parentElement.remove();
 notify.innerHTML = "⬇ Download Started";
 
