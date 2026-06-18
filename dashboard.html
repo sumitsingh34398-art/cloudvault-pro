@@ -149,7 +149,6 @@ return;
         alert("File Uploaded Successfully");
         console.log(data);
     }
-});
     
     if (upload.files.length > 0) {
         let li = document.createElement("li");
@@ -177,7 +176,7 @@ else if (fileName.endsWith(".zip")) {
 else if (fileName.endsWith(".txt")) {
    icon = "📝";
 }
-let fileURL = URL.createObjectURL(upload.files[0]);
+let fileURL = data.fullpath;
 
 li.innerHTML =
 '<span onclick="previewFile(\'' + fileURL + '\', \'' + fileName + '\')" style="cursor:pointer;">'
