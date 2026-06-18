@@ -461,7 +461,7 @@ let files = JSON.parse(
 
  });
 
-let currentUser = localStorage.getItem("userEmail");
+ currentUser = localStorage.getItem("userEmail");
 
 if(localStorage.getItem("premiumUser_" + currentUser) == "true") {
        document.getElementById("fileCount").innerText = "Total Files: Unlimited ♾️";
