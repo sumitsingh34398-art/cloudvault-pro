@@ -152,8 +152,8 @@ return;
     });
     
         console.log("reached after upload");
-    
     if (upload.files.length > 0) {
+        console.log("Enterd file list block");
         let li = document.createElement("li");
         let fileName = upload.files[0].name;
 let icon = "📁";
@@ -192,6 +192,7 @@ li.innerHTML =
 
 '<button onclick="removeFile(this, \'' + fileName + '\')">❌</button>';
         list.appendChild(li);
+        console.log("File added to dashboard");
         let history = JSON.parse(localStorage.getItem("history")) || [];
 history.push("Uploaded: " + fileName);
 localStorage.setItem("history", JSON.stringify(history));
